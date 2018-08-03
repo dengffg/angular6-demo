@@ -1,0 +1,30 @@
+<div>
+  <div>动态添加一个可交互组件。</div>
+  使用场景：三个页面展示表格字段相同，只是每个页面表格的操作不同。那么可通过将不同的操作封装成单独的组件，动态添加到表格中。
+</div>
+<div>
+  <button (click)="addComponent(1)">添加组件1操作</button>
+  <button (click)="addComponent(2)">添加组件1操作</button>
+</div>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>名称</th>
+        <th>描述</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>测试</td>
+        <td>测试描述</td>
+        <td>
+          <ng-template dynamic-host>
+
+          </ng-template>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
